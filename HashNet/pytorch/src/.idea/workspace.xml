@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7035a069-eaa6-4084-8b65-7e4bbc92f818" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../caffe/examples/finetune_flickr_style/assemble_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/examples/pycaffe/caffenet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/examples/pycaffe/layers/pascal_multilabel_datalayers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/examples/pycaffe/layers/pyloss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/examples/pycaffe/tools.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/examples/web_demo/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/examples/web_demo/exifutil.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/models/predict/coco/predict_parallel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/models/predict/imagenet/predict_parallel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/models/predict/nuswide_81/predict_parallel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/classifier.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/coord_map.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/detector.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/draw.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/io.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/net_spec.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/pycaffe.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/test/test_coord_map.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/test/test_io.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/test/test_layer_type_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/test/test_net.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/test/test_net_spec.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/test/test_python_layer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/test/test_python_layer_with_param_str.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/caffe/test/test_solver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/classify.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/detect.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/python/draw_net.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/scripts/copy_notebook.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/scripts/cpp_lint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/scripts/download_model_binary.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/src/caffe/test/test_data/generate_sample_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/tools/extra/extract_seconds.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/tools/extra/parse_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/tools/extra/resize_and_crop_images.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../caffe/tools/extra/summarize.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adv_src/create_adv.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adv_src/data_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adv_src/network.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adv_src/pre_process.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cifar10Train.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/createGaussian.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mnistTrain.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myArgsExpForImageNet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myArgsExpImageNetEPS.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myArgsExprPlaces365EPS.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myClustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/myClustering.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myCreateAdv.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myCreateAdvForBlack.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myEvaluation.py" beforeDir="false" afterPath="$PROJECT_DIR$/myEvaluation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpAdvCountByClass.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpBlackboxAttack.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpCluster.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpCoolie.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpDifferentDBSCAN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpDifferentK.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpEvaluateImageNet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpEvaluatePlaces365.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpFitting.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpForImageNet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpForImageNetSoftmax.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpForIterHamm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpForNusWide.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpForPlaces365.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpForTSNE.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpTable1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpTableMSE.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpTableMSEPlaces365.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpUsability.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpUsabilityImageNet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpUsabilityPlaces365.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExperiments.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExpsForNewLossStat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExtractCodeLabel.py" beforeDir="false" afterPath="$PROJECT_DIR$/myExtractCodeLabel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myExtractCodeLabelForBlack.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myGetAdv.py" beforeDir="false" afterPath="$PROJECT_DIR$/myGetAdv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myGetAdvImgs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myResumeTrain.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myRetrieval.py" beforeDir="false" afterPath="$PROJECT_DIR$/myRetrieval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTrain.py" beforeDir="false" afterPath="$PROJECT_DIR$/myTrain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre_process.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/publicFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/publicFunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publicVariables.py" beforeDir="false" afterPath="$PROJECT_DIR$/publicVariables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../environment.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../feature_viz/cat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../feature_viz/create_adv.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../feature_viz/extract_feature.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../feature_viz/new_cat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../feature_viz/output/adv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../feature_viz/output/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../feature_viz/output/new_adv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../feature_viz/output/new_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../feature_viz/output/new_saved_image" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../feature_viz/output/saved_image" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1Z8y7WbdQzayiQEV3i58TXWRjkH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7035a069-eaa6-4084-8b65-7e4bbc92f818" name="Default Changelist" comment="" />
+      <created>1584234848440</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584234848440</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584240425336">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1080.-588.1080.1880/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1584240425336" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1584235419608">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/-1080.-588.1080.1880/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1584235419608" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1584332644786">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1080.-588.1080.1880/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1584332644786" />
+    <state x="645" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1584242415209">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="645" y="344" key="com.intellij.ide.util.TipDialog/-1080.-588.1080.1880/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1584242415209" />
+    <state x="701" y="167" key="refactoring.ChangeSignatureDialog" timestamp="1584302074832">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="701" y="167" key="refactoring.ChangeSignatureDialog/-1080.-588.1080.1880/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1584302074832" />
+  </component>
+</project>
