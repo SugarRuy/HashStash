@@ -143,7 +143,7 @@ class SavedDBscanCluster:
         self.datapath_circle = '%s/circle_eps_%s.npz' % (self.datapath, str(eps))
         self.eps = eps
         if not os.path.exists(self.datapath):
-            os.mkdir(self.datapath)
+            os.makedirs(self.datapath)
         if not os.path.exists(self.datapath_cluster):
             # create the cluster and save them
             cluster = dbscan_cluster(eps)

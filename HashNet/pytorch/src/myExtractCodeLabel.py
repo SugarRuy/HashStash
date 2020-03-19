@@ -182,8 +182,7 @@ if __name__ == "__main__":
     # Then save them into ./save_for_load/blackbox/
 
     os.environ["CUDA_VISIBLE_DEVICES"] = '0'
-    job_dataset = 'places365'
-    global Hashbit
+    job_dataset = 'imagenet'
     Hashbit = 48
     net = 'ResNet152'
 
@@ -201,7 +200,7 @@ if __name__ == "__main__":
 
     from publicFunctions import load_model_class
 
-    model_dict_path = snapshot_path + 'iter_%5d_model_dict.pth.tar' % (iter_lists[net][job_dataset])
+    model_dict_path = snapshot_path + 'iter_%05d_model_dict.pth.tar' % (iter_lists[net][job_dataset])
     model = load_model_class(net)
     model.load_state_dict(torch.load(model_dict_path))
     model = model.cuda().eval()

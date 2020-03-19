@@ -75,13 +75,13 @@ def get_adv_untarget(model, img_t, targetCode, eps=1.0 / 255, threshold=40, loss
             print 'Adv generation failed'
             end = time.time()
             print end - start
-            return False
+            return inputs
 
     print 'Final Hamming distance : ', np.sum(np.abs(tCodeValue - oCodeValue)) / 2
     return inputs
 
 
-def get_adv_cluster_circle_loss(model, img_t, lr, code_test, loss_fun, return_params=False, job_dataset='', K_value=0,
+def get_adv_cluster_circle_loss(model, img_t, lr, code_test, loss_fun, return_params=False, job_dataset='', net = '', K_value=0,
                                 max_iters=100):
     """
 
@@ -89,10 +89,11 @@ def get_adv_cluster_circle_loss(model, img_t, lr, code_test, loss_fun, return_pa
         model - whitebox model
         img_t (torch.Tensor) - input image
         lr (float) - learning rate
-        code_test (numpy.ndarray) - hashcode of the test set
+        code_test (numpy.ndarray) - hashcode for creating the cluster
         loss_fun (callable) - loss function
-        return_params (bool) - return the process of generating or not
+        return_params (bool) - returns params or not
         job_dataset (str) - name of dataset
+        net (str) - name of the net
         K_value (int) - K value of K-means algorithm
         max_iters (int) - max iteration of optimization algorithm
 
@@ -176,7 +177,7 @@ def get_adv_cluster_circle_loss(model, img_t, lr, code_test, loss_fun, return_pa
         return inputs
 
 
-def get_adv_cluster_circle_loss_dbscan(model, img_t, lr, code_test, loss_fun, return_params=False, job_dataset='',
+def get_adv_cluster_circle_loss_dbscan(model, img_t, lr, code_test, loss_fun, return_params=False, job_dataset='', net = '',
                                        eps=0.5,
                                        max_iters=100):
     """
@@ -185,10 +186,11 @@ def get_adv_cluster_circle_loss_dbscan(model, img_t, lr, code_test, loss_fun, re
         model - whitebox model
         img_t (torch.Tensor) - input image
         lr (float) - learning rate
-        code_test (numpy.ndarray) - hashcode of the test set
+        code_test (numpy.ndarray) - hashcode for creating the cluster
         loss_fun (callable) - loss function
-        return_params (bool) - return the process of generating or not
+        return_params (bool) - returns or not
         job_dataset (str) - name of dataset
+        net (str) - name of the net
         eps (float) - eps of the DBSCAN algorithm
         max_iters (int) - max iteration of optimization algorithm
 
@@ -201,7 +203,7 @@ def get_adv_cluster_circle_loss_dbscan(model, img_t, lr, code_test, loss_fun, re
         else it returns:
             inputs (torch.Variable) - the adversarial example
     """
-    savedCluster = SavedDBscanCluster(job_dataset, eps, code_test)
+    savedCluster = SavedDBscanCluster(job_dataset, eps, code_test, net)
     circles_index, clusterCircleNums, clusterCenters = savedCluster.get_circle_vars()
 
     if not isinstance(clusterCenters, torch.cuda.FloatTensor):
@@ -287,16 +289,22 @@ def get_round_adv(adv__):
 
 
 if __name__ == "__main__":
-    job_dataset = 'places365'
+    job_dataset = 'cifar10'
     job_values = ['mnist', 'cifar10', 'fashion_mnist', 'imagenet', 'places365']
-    net_values = ['ResNet18', 'ResNet34', 'AlexNet', 'ResNet152', 'ResNext101_32x4d']
-    net = 'ResNet152'
+    net_values = ['ResNet50', 'ResNet152']
+    net = 'ResNet50'
 
+    # index of the image in test set
     index = 6
-    K_value = 72
-    eps = 2.5
+    # cluster-based method paramters
+    K_value = 25
+    eps = 1.5
+    lr = 0.1
+    # hamming maximum method paramters
+    hdm_eps = 1.0
+    threshold = 32
 
-    adv_method = 'cbwm'
+    adv_method = 'hdm'
     adv_method_value = ['hdm', 'cbwm', 'ori']
 
     from publicVariables import th_h, th_l
@@ -305,13 +313,13 @@ if __name__ == "__main__":
     from publicVariables import iter_lists
 
     snapshot_path = '../snapshot/' + job_dataset + '_48bit_' + net + '_hashnet/'
-    model_path = snapshot_path + 'iter_%5d_model.pth.tar' % (iter_lists[net][job_dataset])
+    model_path = snapshot_path + 'iter_%05d_model.pth.tar' % (iter_lists[net][job_dataset])
     query_path = './save_for_load/blackbox/' + net + '/' + job_dataset + '_test_output_code_label.npz'
     database_path = './save_for_load/blackbox/' + net + '/' + job_dataset + '_database_output_code_label.npz'
 
     from publicFunctions import load_model_class
 
-    model_dict_path = snapshot_path + 'iter_%5d_model_dict.pth.tar' % (iter_lists[net][job_dataset])
+    model_dict_path = snapshot_path + 'iter_%05d_model_dict.pth.tar' % (iter_lists[net][job_dataset])
     model = load_model_class(net)
     model.load_state_dict(torch.load(model_dict_path))
     model = model.cuda().eval()
@@ -330,18 +338,18 @@ if __name__ == "__main__":
     img_t = img
     targetCode = code_test[index]
 
-    isKmeans = False
+    isKmeans = True
 
     if adv_method == 'hdm':
-        adv__ = get_adv_untarget(model, img_t, targetCode, eps=1.0 / 255, threshold=32)
+        adv__ = get_adv_untarget(model, img_t, targetCode, eps=hdm_eps / 255, threshold=threshold)
     elif adv_method == 'cbwm':
         if isKmeans:
-            adv__ = get_adv_cluster_circle_loss(model, img_t, lr=0.1 / 255, code_test=code, \
-                                                loss_fun=clusterCircleLoss, job_dataset=job_dataset, \
+            adv__ = get_adv_cluster_circle_loss(model, img_t, lr=lr / 255, code_test=code, \
+                                                loss_fun=clusterCircleLoss, job_dataset=job_dataset, net = net, \
                                                 K_value=K_value)
         else:
-            adv__ = get_adv_cluster_circle_loss_dbscan(model, img_t, lr=0.1 / 255, code_test=code_test,
-                                                       loss_fun=clusterCircleLoss, eps=eps, job_dataset=job_dataset)
+            adv__ = get_adv_cluster_circle_loss_dbscan(model, img_t, lr=lr / 255, code_test=code,
+                                                       loss_fun=clusterCircleLoss, eps=eps, job_dataset=job_dataset , net = net)
 
     img__ = Variable(img_t).cuda().unsqueeze(0)
     img_num_by_class = get_img_num_by_class_from_img(img__, model, code, multi_label,

@@ -20,6 +20,7 @@ def get_dsets(job_dataset):
         from myExtractCodeLabel import get_dsets_loader_imagenet
         dsets, dset_loaders = get_dsets_loader_imagenet()
     if job_dataset == 'fashion_mnist':
+        from myExtractCodeLabel import trans_train_resize_mnist
         root = '../../../../data/fashion_mnist'
         trans = trans_train_resize_mnist()
         dsets['test'] = dset.FashionMNIST(root=root, train=False, transform=trans, download=True)

@@ -42,7 +42,7 @@ if __name__ == "__main__":
     from publicVariables import iter_lists
 
     snapshot_path = '../snapshot/' + job_dataset + '_48bit_' + net + '_hashnet/'
-    model_path = snapshot_path + 'iter_%5d_model.pth.tar' % (iter_lists[net][job_dataset])
+    model_path = snapshot_path + 'iter_%05d_model.pth.tar' % (iter_lists[net][job_dataset])
     query_path = './save_for_load/blackbox/' + net + '/' + job_dataset + '_test_output_code_label.npz'
     database_path = './save_for_load/blackbox/' + net + '/' + job_dataset + '_database_output_code_label.npz'
     R = 500
