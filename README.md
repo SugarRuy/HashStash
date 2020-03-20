@@ -3,7 +3,7 @@ A PyTorch Implementation of "Evade Deep Image Retrieval by Stashing Private Imag
 
 It is based on [HashNet](https://github.com/thuml/HashNet) pytorch version, tested on PyTorch 0.3.1.
 
-## Requirement
+## Requirements
 Python 2.7
 
 PyTorch 0.3.1 (Newer version may work with a little modification but we cannot guarantee.)
@@ -25,24 +25,25 @@ Relative path is used. Please check [./HashNet/pytorch/data/places365_standard/]
 ### CIFAR-10, Fashion-MNIST, MNIST
 We use the full dataset of these tiny datasets. Since they are all supported by torchvision package, there is no need to download the original dataset.
 
-## Running our algorithm
+## Running Our Algorithm
 
 Running our algorithm can be easy to do by simply typing:
 ```
 python myGetAdv.py 
 ```
 
-However, before typing it, a model file and hash code files for corresponding dataset should be ready to make it run smoothly. We provide link for downloading all models and hash code files we have used. Here is the [link](https://drive.google.com/open?id=1d_jBCcMfKgJ_dKfWAlwDxQXQGb0r2HqI). 
+However, before typing it, a model file and hash code files for corresponding dataset should be ready to make it run smoothly.  The model file should be saved into ./HashNet/pytorch/snapshot/[job_dataset]/_48bit_/[net]_hashnet/. The hash code files should be saved into ./HashNet/pytorch/src/save_for_load/blackbox/[net]/[job_dataset]/. 
 
-The model file should be saved into ./HashNet/pytorch/snapshot/[job_dataset]/_48bit_/[net]_hashnet/. The hash code files should be saved into ./HashNet/pytorch/src/save_for_load/blackbox/[net]/[job_dataset]/.
+We provide link for downloading all models and hash code files we have used. Here is the [link](https://drive.google.com/open?id=1d_jBCcMfKgJ_dKfWAlwDxQXQGb0r2HqI). (**This method is RECOMMENDED**)
 
-The trained model is also able to be done by running following command with the default setting: 
-```
-python myTrain.py 
-```
+### Optional Step
+The trained models are created by *myExtractCodeLabel.py* after the dataset are ready. Run it using ```python myTrain.py ```
 
-For the convenience, ```python myExtractCodeLabel.py``` is for the hash code files. 
+The Hash Code files are created from *myExtractCodeLabel.py* after setting up the trained models. Run it using ```python myExtractCodeLabel.py```.
+ 
+Both of them support all the five datasets we mentioned earlier. For the details, you may need to dig into them.
 
 ## Contacts and Issues
     Yanru Xiao: [yxiao002@odu.edu](mailto:yxiao002@odu.edu)
     For any further issues, please oepn a new issue on github. 
+
